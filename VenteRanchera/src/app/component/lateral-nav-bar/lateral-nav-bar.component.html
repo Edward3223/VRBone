@@ -65,14 +65,7 @@
 
                         </div>
 
-                        <div ngbDropdown class="d-inline-block">
-                            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
-                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                                <button ngbDropdownItem>Action - 1</button>
-                                <button ngbDropdownItem>Another Action</button>
-                                <button ngbDropdownItem>Something else is here</button>
-                            </div>
-                        </div>
+
 
                     </div>
                 </div>
@@ -98,7 +91,7 @@
                                         Accommodations</strong>(1480m)
                                     </li> -->
 
-                                    <div class="card" style="box-shadow: 4px 2px 2px 0px #d9534f; margin-bottom: 15px;" *ngFor="let item of vendorList">
+                                    <div class="card" style="box-shadow: 4px 2px 2px 0px #d9534f; margin-bottom: 15px; width: 952px;" *ngFor="let item of vendorList">
                                         <div class="card-body">
 
 
@@ -108,7 +101,26 @@
                                                     <label class="namelabel"> {{item.nombre}} {{item.apellido}} </label>
                                                 </div>
                                                 <div>
-                                                    <a class="btn " href="#" role="button"><i class="fas fa-ellipsis-v fa-2x"></i></a>
+
+                                                    <div ngbDropdown>
+                                                        <a ngbDropdownToggle id="navbarDropdown2" role="button">
+                                                            <i style=" margin-top: 25px;" class="fas fa-ellipsis-v fa-2x"></i>
+                                                        </a>
+                                                        <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-right">
+                                                            <a ngbDropdownItem href="#">Historia de visitas</a>
+                                                            <a ngbDropdownItem href="#">Pedidos del vendedor</a>
+                                                            <a ngbDropdownItem href="#">Asignar al vendedor</a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- 
+                                                    <div ngbDropdown class="d-inline-block">
+                                                        <a id="dropdownBasic1" ngbDropdownToggle><i style=" margin-top: 25px;" class="fas fa-ellipsis-v fa-2x"></i></a>
+                                                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                            <button ngbDropdownItem>Historial de visitas</button>
+                                                            <button ngbDropdownItem>Pedidos</button>
+                                                            <button ngbDropdownItem>Asignar</button>
+                                                        </div>
+                                                    </div> -->
                                                 </div>
 
 
@@ -126,11 +138,6 @@
 
                             </div>
                         </div>
-
-
-
-
-
                     </div>
                 </div>
             </div>

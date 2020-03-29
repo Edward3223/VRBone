@@ -38,7 +38,7 @@ body {
     max-height: 470px;
     margin-bottom: 10px;
     overflow: scroll;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     -webkit-overflow-scrolling: touch;
 }
 
@@ -57,4 +57,8 @@ body {
     margin-top: 15px;
     margin-bottom: 0px;
     margin-right: 600px;
+}
+
+.dropdown-toggle::after {
+    display: none;
 }

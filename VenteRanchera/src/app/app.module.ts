@@ -8,6 +8,7 @@ import { LoginComponent } from './component/login/login.component';
 import { LateralNavBarComponent } from './component/lateral-nav-bar/lateral-nav-bar.component';
 import { RouterModule } from '@angular/router';
 import { VendorListComponent } from './component/vendor-list/vendor-list.component';
+import { DelivaryComponent } from './component/delivary/delivary.component';
 
 
 
@@ -17,7 +18,8 @@ import { VendorListComponent } from './component/vendor-list/vendor-list.compone
     AppComponent,
     LoginComponent,
     LateralNavBarComponent,
-    VendorListComponent
+    VendorListComponent,
+    DelivaryComponent
   ],
   imports: [
     NgbModule,
