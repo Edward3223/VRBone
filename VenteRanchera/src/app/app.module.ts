@@ -1,18 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { ROUTES } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './component/login/login.component';
+import { LateralNavBarComponent } from './component/lateral-nav-bar/lateral-nav-bar.component';
+import { RouterModule } from '@angular/router';
+import { VendorListComponent } from './component/vendor-list/vendor-list.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    LateralNavBarComponent,
+    VendorListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    ROUTES,
+    RouterModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
