@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   goToPirncipalPage() {
 
-    this.routes.navigate(['/User']);
+    this.routes.navigate(['/User/Vendor']);
 
   }
 

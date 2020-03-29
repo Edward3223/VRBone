@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import 'bootstrap/dist/js/bootstrap.bundle';
 
 @Component({
   selector: 'app-lateral-nav-bar',
@@ -19,11 +21,23 @@ export class LateralNavBarComponent implements OnInit {
     { nombre: 'Alfonso', apellido: 'ramirez' }
   ]
 
-  constructor() { }
+  constructor(private routes: Router) { }
 
   ngOnInit() {
 
     console.log(this.vendorList)
+  }
+
+  logOut() {
+
+    this.routes.navigate(['/User']);
+
+  }
+
+  goToVendors() {
+
+    this.routes.navigate(['/User/Vendor']);
+
   }
 
 }

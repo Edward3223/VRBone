@@ -7,7 +7,8 @@ import { VendorListComponent } from './component/vendor-list/vendor-list.compone
 
 const routes: Routes = [
 
-  { path: 'User', component: LateralNavBarComponent },
+  { path: 'User/Vendor', component: LateralNavBarComponent },
+  { path: 'User', component: LoginComponent },
 
   { path: '**', component: LoginComponent }
 

@@ -59,9 +59,19 @@
                     <div class="card-body">
                         <div class="buttoncolum" style="margin-top: 20px;">
 
-                            <button type="button" class="btn btn-danger btn-lg btn-block" style="box-shadow: 5px 6px 0px 2px #d9534f; margin-bottom: 30px;">Vendedor</button>
-                            <button type="button" class="btn btn-danger btn-lg btn-block" style="box-shadow: 5px 6px 0px 2px #d9534f;">Repartidores</button>
+                            <button (click)="goToVendors()" type="button" class="btn btn-danger btn-lg btn-block" style="box-shadow: 5px 6px 0px 2px #d9534f; margin-bottom: 30px;"> <i class="fas fa-warehouse"></i> Vendedor</button>
+                            <button type="button" class="btn btn-danger btn-lg btn-block" style="box-shadow: 5px 6px 0px 2px #d9534f;"><i class="fas fa-truck"></i> Repartidores</button>
+                            <button (click)="logOut()" type="button" class="btn btn-danger btn-lg btn-block" style="box-shadow: 5px 6px 0px 2px #d9534f; margin-top: 30px;"><i class="fas fa-sign-out-alt"></i> LogOut</button>
 
+                        </div>
+
+                        <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+                            <button class="btn btn-outline-primary mr-2" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()">Toggle dropdown</button>
+                            <div ngbDropdownMenu aria-labelledby="dropdownManual">
+                                <button ngbDropdownItem>Action - 1</button>
+                                <button ngbDropdownItem>Another Action</button>
+                                <button ngbDropdownItem>Something else is here</button>
+                            </div>
                         </div>
 
                     </div>
@@ -74,6 +84,13 @@
 
                     <div class="card-body">
 
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label color='danger' class="input-group-text" id="inputGroup-sizing-default">Buscar</label>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+
                         <div class="panel panel-primary" id="result_panel">
                             <div class="panel-body">
                                 <ul class="list-group">
@@ -85,11 +102,17 @@
                                         <div class="card-body">
 
 
-                                            <div class="aberorder ">
-                                                <i class="fas fa-user fa-4x"></i>
-                                                <label style=" margin-left: 30px; font-size: x-large;"> {{item.nombre}} {{item.apellido}} 
+                                            <div class=" laberorder">
+                                                <div><i class="fas fa-user fa-4x"></i></div>
+                                                <div>
+                                                    <label class="namelabel"> {{item.nombre}} {{item.apellido}} </label>
+                                                </div>
+                                                <div>
                                                     <a class="btn " href="#" role="button"><i class="fas fa-ellipsis-v fa-2x"></i></a>
-                                                </label>
+                                                </div>
+
+
+
                                                 <!-- <button type="button" class="btn threepntbtn"></button> -->
 
 

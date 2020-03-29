@@ -35,7 +35,7 @@ body {
 }
 
 .list-group {
-    max-height: 530px;
+    max-height: 470px;
     margin-bottom: 10px;
     overflow: scroll;
     overflow-x: hidden;
@@ -44,10 +44,17 @@ body {
 
 .laberorder {
     display: flex;
-    justify-content: space-around
+    justify-content: space-between
 }
 
 .threepntbtn {
     display: flex;
     justify-content: flex-end;
+}
+
+.namelabel {
+    font-size: x-large;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    margin-right: 600px;
 }
