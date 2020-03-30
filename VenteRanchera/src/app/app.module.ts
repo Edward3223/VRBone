@@ -9,6 +9,10 @@ import { LateralNavBarComponent } from './component/lateral-nav-bar/lateral-nav-
 import { RouterModule } from '@angular/router';
 import { VendorListComponent } from './component/vendor-list/vendor-list.component';
 import { DelivaryComponent } from './component/delivary/delivary.component';
+import { AssignComponent } from './component/assign/assign.component';
+import { OrderhistoryComponent } from './component/orderhistory/orderhistory.component';
+import { VisithistoryComponent } from './component/visithistory/visithistory.component';
+import { OrdersComponent } from './component/orders/orders.component';
 
 
 
@@ -19,7 +23,11 @@ import { DelivaryComponent } from './component/delivary/delivary.component';
     LoginComponent,
     LateralNavBarComponent,
     VendorListComponent,
-    DelivaryComponent
+    DelivaryComponent,
+    AssignComponent,
+    OrderhistoryComponent,
+    VisithistoryComponent,
+    OrdersComponent
   ],
   imports: [
     NgbModule,
