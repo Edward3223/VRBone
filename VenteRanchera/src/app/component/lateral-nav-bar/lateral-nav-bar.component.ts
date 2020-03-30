@@ -40,4 +40,11 @@ export class LateralNavBarComponent implements OnInit {
 
   }
 
+  goToDelivery() {
+
+    this.routes.navigate(['User/Delivery']);
+
+
+  }
+
 }

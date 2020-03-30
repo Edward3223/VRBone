@@ -38,13 +38,14 @@ body {
     max-height: 470px;
     margin-bottom: 10px;
     overflow: scroll;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
 }
 
 .laberorder {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    margin: 30px;
 }
 
 .threepntbtn {
@@ -61,4 +62,9 @@ body {
 
 .dropdown-toggle::after {
     display: none;
+}
+
+.form-control:focus {
+    border-color: red;
+    box-shadow: 0px 1px 1px rgba(241, 48, 48, 0.822) inset, 0px 0px 8px rgba(241, 24, 35, 0.781);
 }

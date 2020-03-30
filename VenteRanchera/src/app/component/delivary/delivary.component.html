@@ -1,1 +1,151 @@
-<p>delivary works!</p>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <div style="margin-left: 100px;">
+
+        <div class="row row-cols-2">
+
+
+
+            <!-- card of user information -->
+
+            <div>
+                <div style="box-shadow: 5px 6px 0px 2px #e6e2d3; margin-left: 10px; width: 307px; margin-left: 45px;" class="card Cardsize">
+                    <div class="Cardimage">
+                        <div class="card-body">
+                            <img class="rounded mx-auto d-block" src="../../../assets/images/defaultuserimage.png" style="width: 25%;">
+                            <h4 class="card-title" style="text-align: center;">Usuario X</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card of title -->
+
+            <div class="col align-self-center">
+                <div>
+                    <div class="card" style="box-shadow: 5px 6px 0px 2px #e6e2d3; margin-left: 15px; width: 1020px;">
+                        <div class="card-body">
+                            <h1 style="text-align: center;">Lista de repartidores</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- card of navbar -->
+
+
+        <div class="row row-cols-2">
+
+            <!-- card of navButtoms -->
+
+            <div>
+                <div class="card " style="width: 307px; height: 538px; box-shadow: 5px 6px 0px 2px #e6e2d3; margin-top: 25px; margin-left: 45px;">
+                    <div class="card-body">
+                        <div class="buttoncolum" style="margin-top: 20px;">
+                            <button (click)="goToVendors()" type="button" class="btn btn-danger btn-lg btn-block" style="box-shadow: 5px 6px 0px 2px #d9534f; margin-bottom: 30px;"> <i class="fas fa-warehouse"></i> Vendedor</button>
+                            <button (click)="goToDelivery()" type="button" class="btn btn-danger btn-lg btn-block" style="box-shadow: 5px 6px 0px 2px #d9534f;"><i class="fas fa-truck"></i> Repartidores</button>
+                            <button (click)="logOut()" type="button" class="btn btn-danger btn-lg btn-block" style="box-shadow: 5px 6px 0px 2px #d9534f; margin-top: 30px;"><i class="fas fa-sign-out-alt"></i> LogOut</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ///card of navButtoms/// -->
+
+
+            <!-- card of infoContent -->
+
+            <div class="col">
+                <div class="card " style="width: 1020px; height: 562px; margin-left: 15px; box-shadow: 5px 6px 0px 2px #e6e2d3;">
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label color='danger' class="input-group-text" id="inputGroup-sizing-default">Buscar</label>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="panel panel-primary" id="result_panel">
+                            <div class="panel-body">
+                                <ul class="list-group">
+                                    <div class="card" style="box-shadow: 4px 2px 2px 0px #d9534f; margin-bottom: 15px; width: 952px;" *ngFor="let item of vendorList">
+                                        <div class="card-body">
+
+
+                                            <div class=" laberorder">
+                                                <div><i class="fas fa-user fa-4x"></i></div>
+                                                <div>
+                                                    <label class="namelabel"> {{item.nombre}} {{item.apellido}} </label>
+                                                    <br>
+                                                    <label style="color: gray;">{{item.empresa}}</label>
+                                                </div>
+                                                <div>
+
+                                                    <!-- Dropdown icon -->
+
+                                                    <div ngbDropdown>
+                                                        <a ngbDropdownToggle id="navbarDropdown2" role="button">
+                                                            <i style=" margin-top: 25px;" class="fas fa-ellipsis-v fa-2x"></i>
+                                                        </a>
+                                                        <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-right">
+                                                            <a ngbDropdownItem href="#">Historial de ordenes</a>
+                                                            <a ngbDropdownItem href="#">Asignar a un vendedor</a>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Dropdown icon -->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ///card of infoContent//// -->
+
+        </div>
+
+        <!-- ////card of navbar/// -->
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://kit.fontawesome.com/cf00e541f7.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

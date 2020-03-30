@@ -60,7 +60,7 @@
                         <div class="buttoncolum" style="margin-top: 20px;">
 
                             <button (click)="goToVendors()" type="button" class="btn btn-danger btn-lg btn-block" style="box-shadow: 5px 6px 0px 2px #d9534f; margin-bottom: 30px;"> <i class="fas fa-warehouse"></i> Vendedor</button>
-                            <button type="button" class="btn btn-danger btn-lg btn-block" style="box-shadow: 5px 6px 0px 2px #d9534f;"><i class="fas fa-truck"></i> Repartidores</button>
+                            <button (click)="goToDelivery()" type="button" class="btn btn-danger btn-lg btn-block" style="box-shadow: 5px 6px 0px 2px #d9534f;"><i class="fas fa-truck"></i> Repartidores</button>
                             <button (click)="logOut()" type="button" class="btn btn-danger btn-lg btn-block" style="box-shadow: 5px 6px 0px 2px #d9534f; margin-top: 30px;"><i class="fas fa-sign-out-alt"></i> LogOut</button>
 
                         </div>
@@ -92,7 +92,7 @@
                                     </li> -->
 
                                     <div class="card" style="box-shadow: 4px 2px 2px 0px #d9534f; margin-bottom: 15px; width: 952px;" *ngFor="let item of vendorList">
-                                        <div class="card-body">
+                                        <div class="card-body" style="padding-top: 0px; padding-left: 0px; padding-right: 0px; padding-bottom: 0px;">
 
 
                                             <div class=" laberorder">
