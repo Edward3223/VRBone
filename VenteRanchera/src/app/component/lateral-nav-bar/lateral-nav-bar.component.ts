@@ -80,7 +80,7 @@ export class LateralNavBarComponent implements OnInit {
 
     this.routes.navigate(['/User/Vendor/', index]);
     this.vendorid = index;
-    this.infotrasport.setIdOfVendor(this.vendorList[index].visitas)
+    this.infotrasport.setVisitOfVendor(this.vendorList[index].visitas)
 
 
 

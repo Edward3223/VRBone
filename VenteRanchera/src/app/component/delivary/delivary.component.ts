@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { InfotrasportService } from 'src/app/Services/infotrasport.service';
 
 @Component({
   selector: 'app-delivary',
@@ -8,11 +9,38 @@ import { Router } from '@angular/router';
 })
 export class DelivaryComponent implements OnInit {
 
-  constructor(private routes: Router) { }
+  constructor(private routes: Router, private infotrasport: InfotrasportService) { }
 
   isActive = false
-  vendorList: any = [
-    { nombre: 'Pepe', apellido: 'ramirez', empresa: 'Empresa X' },
+  deliveryList: any = [
+    {
+      nombre: 'Pepe',
+      apellido: 'ramirez',
+      empresa: 'Empresa X',
+
+      orden: [
+
+        {
+          oid: '1242d',
+          cliente: 'Edward Cabrera',
+          estado: 'Entregado'
+        },
+        {
+          oid: '1242d',
+          cliente: 'Pedro Ramirez',
+          estado: 'Entregado'
+        },
+
+        {
+          oid: '1242d',
+          cliente: 'Juan Martines',
+          estado: 'Entregado'
+        }
+
+      ]
+
+
+    },
     { nombre: 'Jose', apellido: 'ramirez', empresa: 'Empresa A' },
     { nombre: 'godofreda', apellido: 'ramirez', empresa: 'Empresa Z' },
     { nombre: 'Maria', apellido: 'ramirez', empresa: 'Empresa V' },
@@ -21,6 +49,8 @@ export class DelivaryComponent implements OnInit {
     { nombre: 'Pedro', apellido: 'ramirez', empresa: 'Empresa K' },
     { nombre: 'Alfonso', apellido: 'ramirez', empresa: 'Empresa O' }
   ]
+
+
 
   ngOnInit() {
   }
@@ -45,4 +75,24 @@ export class DelivaryComponent implements OnInit {
 
 
   }
+
+  goToOrderHistory(index: number) {
+
+    this.routes.navigate(['/User/Delivery/', index]);
+    this.infotrasport.setAllDeliveryInfo(this.deliveryList[index].orden)
+
+
+
+
+
+  }
+
+  sendAllDeliveryOrder(index: number) {
+    this.infotrasport.setDeliveryOrder(this.deliveryList[index])
+
+
+
+  }
+
+
 }

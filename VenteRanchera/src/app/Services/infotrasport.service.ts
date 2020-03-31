@@ -9,10 +9,13 @@ export class InfotrasportService {
   constructor() { }
 
 
-  recivedVendorInfo: any
-  recivedAllVendorInfo: any
+  recivedVendorInfo: any;
+  recivedAllVendorInfo: any;
 
-  setIdOfVendor(info: any) {
+  recivedDeliveryOder: any;
+  recivedAllDeliveryInfo: any;
+
+  setVisitOfVendor(info: any) {
 
     this.recivedVendorInfo = info
     // console.log('Informacion de las visitas', this.recivedVendorInfo)
@@ -28,6 +31,17 @@ export class InfotrasportService {
   }
 
 
+  setAllDeliveryInfo(info: any) {
+
+    this.recivedDeliveryOder = info
+    console.log('Desde el service', this.recivedDeliveryOder)
+  }
+
+  setDeliveryOrder(info: any) {
+
+    this.recivedAllDeliveryInfo = info
+
+  }
 
 
 }
