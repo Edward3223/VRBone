@@ -78,9 +78,16 @@ export class LateralNavBarComponent implements OnInit {
 
   goToVisitHistory(index: number) {
 
-    this.routes.navigate(['/User/Vendor/', index]);
+    this.routes.navigate(['/User/Vendor/Visit/', index]);
     this.vendorid = index;
     this.infotrasport.setVisitOfVendor(this.vendorList[index].visitas)
+
+
+
+  }
+
+  gotToAssing(index: number) {
+    this.routes.navigate(['User/Delivery/Assing/', index]);
 
 
 

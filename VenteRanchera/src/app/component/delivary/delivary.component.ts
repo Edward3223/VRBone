@@ -78,7 +78,7 @@ export class DelivaryComponent implements OnInit {
 
   goToOrderHistory(index: number) {
 
-    this.routes.navigate(['/User/Delivery/', index]);
+    this.routes.navigate(['/User/Delivery/Order', index]);
     this.infotrasport.setAllDeliveryInfo(this.deliveryList[index].orden)
 
 
